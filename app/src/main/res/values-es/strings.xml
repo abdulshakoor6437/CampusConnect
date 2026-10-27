@@ -1,0 +1,80 @@
+<resources>
+    <!-- App Details -->
+    <string name="app_name">CampusConnect</string>
+    <string name="app_tagline">Conectar. Aprender. Lograr.</string>
+    <string name="app_version">v1.0</string>
+
+    <!-- Splash Screen -->
+    <string name="splash_loading">Cargando recursos del campus…</string>
+
+    <!-- Login Activity -->
+    <string name="login_title">Bienvenido de nuevo</string>
+    <string name="login_subtitle">Inicie sesión para continuar en CampusConnect</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="link_create_account">¿No tiene una cuenta? Registrarse</string>
+    <string name="link_forgot_password">¿Olvidó su contraseña?</string>
+
+    <!-- Register Activity -->
+    <string name="register_title">Crear Cuenta</string>
+    <string name="register_subtitle">Únase a la comunidad de CampusConnect</string>
+    <string name="name_hint">Nombre completo</string>
+    <string name="confirm_password_hint">Confirmar contraseña</string>
+    <string name="btn_register">Registrarse</string>
+    <string name="link_already_have_account">¿Ya tiene una cuenta? Iniciar sesión</string>
+
+    <!-- Forgot Password Activity -->
+    <string name="forgot_password_title">Recuperar Contraseña</string>
+    <string name="forgot_password_instruction">Ingrese su correo registrado para recibir instrucciones de recuperación.</string>
+    <string name="btn_send_reset_link">Enviar enlace de restablecimiento</string>
+    <string name="link_back_to_login">Volver al inicio de sesión</string>
+
+    <!-- Reset Password Activity -->
+    <string name="reset_password_title">Restablecer Contraseña</string>
+    <string name="reset_password_subtitle">Ingrese y confirme su nueva contraseña segura.</string>
+    <string name="new_password_hint">Nueva contraseña</string>
+    <string name="btn_reset_password">Restablecer Contraseña</string>
+
+    <!-- Dashboard Activity -->
+    <string name="dashboard_title">Panel de Control</string>
+    <string name="dashboard_welcome">Bienvenido, %1$s</string>
+    <string name="module_profile">Perfil</string>
+    <string name="module_courses">Cursos</string>
+    <string name="module_notifications">Notificaciones</string>
+    <string name="module_settings">Configuración</string>
+    <string name="module_reports">Informes</string>
+    <string name="module_help">Ayuda</string>
+    <string name="action_profile">Perfil</string>
+
+    <!-- Profile Activity -->
+    <string name="profile_title">Perfil de Usuario</string>
+    <string name="label_user_name">Nombre completo</string>
+    <string name="label_user_email">Correo electrónico</string>
+    <string name="label_role">Rol</string>
+    <string name="role_student">Estudiante de Campus</string>
+    <string name="label_institution">Institución</string>
+    <string name="institution_name">Universidad CampusConnect</string>
+    <string name="btn_logout">Cerrar Sesión</string>
+
+    <!-- Validation & Feedback Messages -->
+    <string name="err_empty_name">El nombre es obligatorio</string>
+    <string name="err_empty_email">El correo electrónico es obligatorio</string>
+    <string name="err_invalid_email">Por favor ingrese un correo válido</string>
+    <string name="err_empty_password">La contraseña es obligatoria</string>
+    <string name="err_password_too_short">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="err_empty_confirm_password">Por favor confirme su contraseña</string>
+    <string name="err_passwords_mismatch">Las contraseñas no coinciden</string>
+    <string name="err_invalid_credentials">Correo o contraseña no válidos</string>
+
+    <string name="toast_registration_success">¡Registro exitoso! Por favor inicie sesión.</string>
+    <string name="msg_reset_link_sent">Enlace de restablecimiento enviado</string>
+    <string name="toast_password_reset_success">¡Contraseña actualizada con éxito! Por favor inicie sesión.</string>
+    <string name="msg_module_clicked">Módulo %1$s seleccionado</string>
+    <string name="toast_logout_success">Sesión cerrada con éxito</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_app_logo">Logo de CampusConnect</string>
+    <string name="cd_profile_avatar">Avatar de usuario</string>
+    <string name="cd_module_icon">Ícono de módulo</string>
+</resources>

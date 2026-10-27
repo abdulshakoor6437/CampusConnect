@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand / Primary Theme Colors (Dark) -->
+    <color name="primary">#76A9FA</color>
+    <color name="on_primary">#1E429F</color>
+    <color name="primary_container">#233876</color>
+    <color name="on_primary_container">#EBF5FF</color>
+
+    <!-- Secondary Accent Colors -->
+    <color name="secondary">#31C48D</color>
+    <color name="on_secondary">#03543F</color>
+    <color name="secondary_container">#046C4E</color>
+    <color name="on_secondary_container">#DEF7EC</color>
+
+    <!-- Background and Surface -->
+    <color name="background">#111827</color>
+    <color name="on_background">#F9FAFB</color>
+    <color name="surface">#1F2A37</color>
+    <color name="on_surface">#F3F4F6</color>
+    <color name="surface_variant">#374151</color>
+    <color name="on_surface_variant">#9CA3AF</color>
+
+    <!-- Stroke & Outline -->
+    <color name="outline">#4B5563</color>
+    <color name="outline_variant">#374151</color>
+
+    <!-- Card Specific -->
+    <color name="card_bg">#1F2A37</color>
+    <color name="card_stroke">#374151</color>
+
+    <!-- Text Variants -->
+    <color name="subtitle_color">#9CA3AF</color>
+
+    <!-- Feedback & Error -->
+    <color name="error">#F98080</color>
+    <color name="on_error">#771D1D</color>
+
+    <!-- Common Standard Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Outer Shield / Emblem Background -->
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M48,6 C28,6 16,14 16,36 C16,62 38,84 48,90 C58,84 80,62 80,36 C80,14 68,6 48,6 Z" />
+    <!-- Inner Accent Shield -->
+    <path
+        android:fillColor="@color/primary_container"
+        android:pathData="M48,14 C32,14 24,20 24,38 C24,58 40,76 48,82 C56,76 72,58 72,38 C72,20 64,14 48,14 Z" />
+    <!-- Academic Cap Top Diamond -->
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M48,26 L26,38 L48,50 L70,38 Z" />
+    <!-- Academic Cap Base / Skullcap -->
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M35,44 L35,55 C35,61 41,66 48,66 C55,66 61,61 61,55 L61,44 L48,51 Z" />
+    <!-- Tassel -->
+    <path
+        android:strokeColor="@color/secondary"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M65,40 L65,56" />
+    <path
+        android:fillColor="@color/secondary"
+        android:pathData="M62,56 L68,56 L66,62 L64,62 Z" />
+</vector>

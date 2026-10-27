@@ -77,4 +77,96 @@
     <string name="cd_app_logo">CampusConnect Logo</string>
     <string name="cd_profile_avatar">User Avatar</string>
     <string name="cd_module_icon">Module Icon</string>
+    <string name="cd_expand_collapse">Toggle answer visibility</string>
+    <string name="cd_course_icon">Course icon</string>
+    <string name="cd_notification_icon">Notification icon</string>
+
+    <!-- Courses Activity -->
+    <string name="courses_title">Courses</string>
+    <string name="courses_subtitle">Enrolled Semester Courses</string>
+    <string name="label_course_code">Code: %1$s</string>
+    <string name="label_instructor">Instructor: %1$s</string>
+    <string name="label_credits">%1$d Credit Hours</string>
+    <string name="course_1_name">Mobile Application Development</string>
+    <string name="course_1_code">CS-401</string>
+    <string name="course_1_instructor">Dr. Alex Turner</string>
+    <string name="course_2_name">Artificial Intelligence</string>
+    <string name="course_2_code">CS-405</string>
+    <string name="course_2_instructor">Prof. Sarah Jenkins</string>
+    <string name="course_3_name">Data Structures</string>
+    <string name="course_3_code">CS-201</string>
+    <string name="course_3_instructor">Dr. David Miller</string>
+    <string name="course_4_name">Database Systems</string>
+    <string name="course_4_code">CS-302</string>
+    <string name="course_4_instructor">Prof. Elena Rostova</string>
+    <string name="course_5_name">Computer Networks</string>
+    <string name="course_5_code">CS-310</string>
+    <string name="course_5_instructor">Dr. Marcus Vance</string>
+
+    <!-- Notifications Activity -->
+    <string name="notifications_title">Notifications</string>
+    <string name="no_notifications">No notifications</string>
+    <string name="notif_1_title">Assignment due tomorrow</string>
+    <string name="notif_1_msg">Mobile Application Development project report is due at 11:59 PM.</string>
+    <string name="notif_1_time">15m ago</string>
+    <string name="notif_2_title">Class rescheduled</string>
+    <string name="notif_2_msg">Database Systems lecture moved to Room 402 on Wednesday at 10:00 AM.</string>
+    <string name="notif_2_time">1h ago</string>
+    <string name="notif_3_title">Exam schedule published</string>
+    <string name="notif_3_msg">Midterm examination dates are now posted on the university student portal.</string>
+    <string name="notif_3_time">3h ago</string>
+    <string name="notif_4_title">Library book reminder</string>
+    <string name="notif_4_msg">Please return \'Clean Architecture\' before Friday to avoid overdue fines.</string>
+    <string name="notif_4_time">Yesterday</string>
+    <string name="notif_5_title">Campus event announcement</string>
+    <string name="notif_5_msg">Annual CodeSprint Hackathon registration closes tonight at midnight.</string>
+    <string name="notif_5_time">2 days ago</string>
+    <string name="notif_6_title">Grade updated</string>
+    <string name="notif_6_msg">Quiz 2 results for Artificial Intelligence have been released.</string>
+    <string name="notif_6_time">3 days ago</string>
+
+    <!-- Settings Activity -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_appearance_header">Appearance &amp; Theme</string>
+    <string name="settings_dark_mode">Dark Mode</string>
+    <string name="settings_dark_mode_desc">Switch between light and dark visual themes</string>
+    <string name="settings_notifications_header">Alerts &amp; Preferences</string>
+    <string name="settings_notifications">Push Notifications</string>
+    <string name="settings_notifications_desc">Receive instant alerts for academic deadlines</string>
+    <string name="settings_about_header">About Application</string>
+    <string name="settings_app_name_label">Application</string>
+    <string name="settings_version_label">Version</string>
+    <string name="toast_notifications_enabled">Notifications enabled</string>
+    <string name="toast_notifications_disabled">Notifications disabled</string>
+
+    <!-- Reports Activity -->
+    <string name="reports_title">Academic Reports</string>
+    <string name="reports_subtitle">Semester Performance Overview</string>
+    <string name="report_attendance_title">Attendance</string>
+    <string name="report_attendance_value">92%</string>
+    <string name="report_attendance_desc">Good standing across all lectures</string>
+    <string name="report_gpa_title">Cumulative GPA</string>
+    <string name="report_gpa_value">3.4 / 4.0</string>
+    <string name="report_gpa_desc">Honor roll academic standing</string>
+    <string name="report_courses_title">Courses Enrolled</string>
+    <string name="report_courses_value">5 Active</string>
+    <string name="report_courses_desc">17 total credit hours this term</string>
+
+    <!-- Help Activity -->
+    <string name="help_title">Help &amp; Support</string>
+    <string name="help_subtitle">Frequently Asked Questions &amp; Support</string>
+    <string name="help_faq_header">Frequently Asked Questions</string>
+    <string name="help_q1">How do I register for new semester courses?</string>
+    <string name="help_a1">Navigate to the Courses module on your dashboard during open registration or consult your academic advisor.</string>
+    <string name="help_q2">Where can I view my latest grade reports?</string>
+    <string name="help_a2">Open the Reports section from your dashboard to view your attendance percentage, cumulative GPA, and course credits.</string>
+    <string name="help_q3">How do I update my profile details?</string>
+    <string name="help_a3">Tap on the Profile card on your dashboard or the profile icon in the toolbar to review your account details.</string>
+    <string name="help_q4">How do I enable Dark Mode?</string>
+    <string name="help_a4">Visit Settings from the dashboard and toggle the Dark Mode switch to immediately apply the dark theme.</string>
+    <string name="help_q5">Who do I contact for technical or academic support?</string>
+    <string name="help_a5">You can contact our campus help desk anytime using the Contact Support button below or via email.</string>
+    <string name="btn_contact_support">Contact Support</string>
+    <string name="email_support_subject">CampusConnect Support Request</string>
+    <string name="toast_support_contact">Contact support at support@campusconnect.example</string>
 </resources>

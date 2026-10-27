@@ -95,13 +95,11 @@ public class DashboardActivity extends AppCompatActivity {
             openProfile();
         });
 
-        // 2. Courses Module: Shows Toast
-        binding.cardModuleCourses.setOnClickListener(v ->
-                showModuleToast(getString(R.string.module_courses)));
+        // 2. Courses Module: Opens CoursesActivity
+        binding.cardModuleCourses.setOnClickListener(v -> openCourses());
 
-        // 3. Notifications Module: Shows Toast
-        binding.cardModuleNotifications.setOnClickListener(v ->
-                showModuleToast(getString(R.string.module_notifications)));
+        // 3. Notifications Module: Opens NotificationsActivity
+        binding.cardModuleNotifications.setOnClickListener(v -> openNotifications());
 
         // 4. Settings Module: Shows Toast
         binding.cardModuleSettings.setOnClickListener(v ->
@@ -127,7 +125,30 @@ public class DashboardActivity extends AppCompatActivity {
      * Navigates to ProfileActivity passing user name and email.
      */
     private void openProfile() {
+        // Explicit Intent to open ProfileActivity
         Intent intent = new Intent(DashboardActivity.this, ProfileActivity.class);
+        intent.putExtra(ValidationUtils.EXTRA_USER_NAME, userName);
+        intent.putExtra(ValidationUtils.EXTRA_USER_EMAIL, userEmail);
+        startActivity(intent);
+    }
+
+    /**
+     * Navigates to CoursesActivity passing user name and email.
+     */
+    private void openCourses() {
+        // Explicit Intent to open CoursesActivity
+        Intent intent = new Intent(DashboardActivity.this, CoursesActivity.class);
+        intent.putExtra(ValidationUtils.EXTRA_USER_NAME, userName);
+        intent.putExtra(ValidationUtils.EXTRA_USER_EMAIL, userEmail);
+        startActivity(intent);
+    }
+
+    /**
+     * Navigates to NotificationsActivity passing user name and email.
+     */
+    private void openNotifications() {
+        // Explicit Intent to open NotificationsActivity
+        Intent intent = new Intent(DashboardActivity.this, NotificationsActivity.class);
         intent.putExtra(ValidationUtils.EXTRA_USER_NAME, userName);
         intent.putExtra(ValidationUtils.EXTRA_USER_EMAIL, userEmail);
         startActivity(intent);

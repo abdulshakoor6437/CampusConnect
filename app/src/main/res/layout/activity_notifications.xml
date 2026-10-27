@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Notifications Screen: Displays campus alerts or an empty state when none exist -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutNotificationsRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".NotificationsActivity">
+
+    <!-- Top App Bar / Toolbar with Back Navigation -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarNotifications"
+        style="@style/Widget.CampusConnect.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@color/on_surface"
+        app:title="@string/notifications_title" />
+
+    <!-- Container for List and Empty State -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Notifications RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/screen_padding"
+            android:paddingTop="@dimen/screen_padding"
+            android:paddingEnd="@dimen/screen_padding"
+            android:paddingBottom="@dimen/screen_padding"
+            tools:listitem="@layout/item_notification" />
+
+        <!-- Empty State TextView -->
+        <TextView
+            android:id="@+id/tvEmptyNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/spacing_large"
+            android:drawablePadding="@dimen/spacing_medium"
+            android:gravity="center"
+            android:text="@string/no_notifications"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/text_body_large"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/ic_notifications"
+            app:drawableTint="@color/subtitle_color" />
+
+    </FrameLayout>
+
+</LinearLayout>

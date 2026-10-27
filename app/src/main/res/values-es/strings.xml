@@ -77,4 +77,96 @@
     <string name="cd_app_logo">Logo de CampusConnect</string>
     <string name="cd_profile_avatar">Avatar de usuario</string>
     <string name="cd_module_icon">Ícono de módulo</string>
+    <string name="cd_expand_collapse">Alternar visibilidad de respuesta</string>
+    <string name="cd_course_icon">Ícono de curso</string>
+    <string name="cd_notification_icon">Ícono de notificación</string>
+
+    <!-- Courses Activity -->
+    <string name="courses_title">Cursos</string>
+    <string name="courses_subtitle">Cursos Matriculados del Semestre</string>
+    <string name="label_course_code">Código: %1$s</string>
+    <string name="label_instructor">Instructor: %1$s</string>
+    <string name="label_credits">%1$d Horas de Crédito</string>
+    <string name="course_1_name">Desarrollo de Aplicaciones Móviles</string>
+    <string name="course_1_code">CS-401</string>
+    <string name="course_1_instructor">Dr. Alex Turner</string>
+    <string name="course_2_name">Inteligencia Artificial</string>
+    <string name="course_2_code">CS-405</string>
+    <string name="course_2_instructor">Prof. Sarah Jenkins</string>
+    <string name="course_3_name">Estructuras de Datos</string>
+    <string name="course_3_code">CS-201</string>
+    <string name="course_3_instructor">Dr. David Miller</string>
+    <string name="course_4_name">Sistemas de Bases de Datos</string>
+    <string name="course_4_code">CS-302</string>
+    <string name="course_4_instructor">Prof. Elena Rostova</string>
+    <string name="course_5_name">Redes de Computadoras</string>
+    <string name="course_5_code">CS-310</string>
+    <string name="course_5_instructor">Dr. Marcus Vance</string>
+
+    <!-- Notifications Activity -->
+    <string name="notifications_title">Notificaciones</string>
+    <string name="no_notifications">No hay notificaciones</string>
+    <string name="notif_1_title">Entrega de tarea mañana</string>
+    <string name="notif_1_msg">El informe del proyecto de aplicaciones móviles vence a las 11:59 PM.</string>
+    <string name="notif_1_time">Hace 15m</string>
+    <string name="notif_2_title">Clase reprogramada</string>
+    <string name="notif_2_msg">La clase de Sistemas de Bases de Datos se trasladó al Aula 402 el miércoles a las 10:00 AM.</string>
+    <string name="notif_2_time">Hace 1h</string>
+    <string name="notif_3_title">Horario de exámenes publicado</string>
+    <string name="notif_3_msg">Las fechas de los exámenes parciales ya están publicadas en el portal estudiantil.</string>
+    <string name="notif_3_time">Hace 3h</string>
+    <string name="notif_4_title">Recordatorio de biblioteca</string>
+    <string name="notif_4_msg">Por favor devuelva \'Clean Architecture\' antes del viernes para evitar recargos.</string>
+    <string name="notif_4_time">Ayer</string>
+    <string name="notif_5_title">Anuncio de evento del campus</string>
+    <string name="notif_5_msg">La inscripción para el Hackatón Anual CodeSprint cierra esta noche a la medianoche.</string>
+    <string name="notif_5_time">Hace 2 días</string>
+    <string name="notif_6_title">Calificación actualizada</string>
+    <string name="notif_6_msg">Se han publicado los resultados del Cuestionario 2 de Inteligencia Artificial.</string>
+    <string name="notif_6_time">Hace 3 días</string>
+
+    <!-- Settings Activity -->
+    <string name="settings_title">Configuración</string>
+    <string name="settings_appearance_header">Apariencia y Tema</string>
+    <string name="settings_dark_mode">Modo Oscuro</string>
+    <string name="settings_dark_mode_desc">Alternar entre temas visuales claro y oscuro</string>
+    <string name="settings_notifications_header">Alertas y Preferencias</string>
+    <string name="settings_notifications">Notificaciones Push</string>
+    <string name="settings_notifications_desc">Recibir alertas instantáneas de fechas académicas</string>
+    <string name="settings_about_header">Información de la Aplicación</string>
+    <string name="settings_app_name_label">Aplicación</string>
+    <string name="settings_version_label">Versión</string>
+    <string name="toast_notifications_enabled">Notificaciones activadas</string>
+    <string name="toast_notifications_disabled">Notificaciones desactivadas</string>
+
+    <!-- Reports Activity -->
+    <string name="reports_title">Informes Académicos</string>
+    <string name="reports_subtitle">Resumen de Rendimiento Semestral</string>
+    <string name="report_attendance_title">Asistencia</string>
+    <string name="report_attendance_value">92%</string>
+    <string name="report_attendance_desc">Buen registro en todas las clases impartidas</string>
+    <string name="report_gpa_title">GPA Acumulado</string>
+    <string name="report_gpa_value">3.4 / 4.0</string>
+    <string name="report_gpa_desc">Posición en el cuadro de honor académico</string>
+    <string name="report_courses_title">Cursos Inscritos</string>
+    <string name="report_courses_value">5 Activos</string>
+    <string name="report_courses_desc">17 horas de crédito totales en este período</string>
+
+    <!-- Help Activity -->
+    <string name="help_title">Ayuda y Soporte</string>
+    <string name="help_subtitle">Preguntas Frecuentes y Asistencia</string>
+    <string name="help_faq_header">Preguntas Frecuentes</string>
+    <string name="help_q1">¿Cómo me inscribo en los cursos del nuevo semestre?</string>
+    <string name="help_a1">Vaya al módulo Cursos en su panel durante el período de inscripción o consulte a su asesor académico.</string>
+    <string name="help_q2">¿Dónde puedo consultar mis últimos reportes de calificaciones?</string>
+    <string name="help_a2">Abra la sección Informes desde su panel para ver su porcentaje de asistencia, GPA acumulado y créditos de cursos.</string>
+    <string name="help_q3">¿Cómo actualizo los datos de mi perfil?</string>
+    <string name="help_a3">Presione la tarjeta Perfil en su panel o el ícono de perfil en la barra de herramientas para revisar los detalles de su cuenta.</string>
+    <string name="help_q4">¿Cómo puedo activar o desactivar el Modo Oscuro?</string>
+    <string name="help_a4">Visite Configuración desde el panel y active o desactive el interruptor de Modo Oscuro para aplicar el tema de inmediato.</string>
+    <string name="help_q5">¿A quién contacto para soporte técnico o académico?</string>
+    <string name="help_a5">Puede contactar a nuestra mesa de ayuda del campus en cualquier momento con el botón Contactar a Soporte a continuación o por correo.</string>
+    <string name="btn_contact_support">Contactar a Soporte</string>
+    <string name="email_support_subject">Solicitud de Soporte CampusConnect</string>
+    <string name="toast_support_contact">Escriba a soporte a support@campusconnect.example</string>
 </resources>

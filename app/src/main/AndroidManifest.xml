@@ -51,7 +51,18 @@
 
         <activity
             android:name=".ProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".DashboardActivity" />
+
+        <activity
+            android:name=".CoursesActivity"
+            android:exported="false"
+            android:parentActivityName=".DashboardActivity" />
+
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="false"
+            android:parentActivityName=".DashboardActivity" />
 
     </application>
 

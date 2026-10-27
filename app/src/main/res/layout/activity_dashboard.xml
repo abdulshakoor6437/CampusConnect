@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mandatory Layout Demonstration: GridLayout (2 columns) for Dashboard module grid -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutDashboardRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
+
+    <!-- Top App Bar / Toolbar with Profile action menu -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarDashboard"
+        style="@style/Widget.CampusConnect.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:menu="@menu/menu_dashboard"
+        app:title="@string/dashboard_title"
+        app:titleCentered="false" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <!-- Welcome Greeting Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDashboardWelcome"
+                style="@style/Widget.CampusConnect.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                app:cardBackgroundColor="@color/primary_container">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_medium">
+
+                    <ImageView
+                        android:id="@+id/imgWelcomeIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:contentDescription="@string/cd_profile_avatar"
+                        android:src="@drawable/ic_campus_logo" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDashboardWelcome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dashboard_welcome"
+                            android:textColor="@color/on_primary_container"
+                            android:textSize="@dimen/text_title_medium"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDashboardTagline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_tagline"
+                            android:textColor="@color/on_primary_container"
+                            android:textSize="@dimen/text_body_medium" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Mandatory Layout Demonstration: 2-Column GridLayout with MaterialCardView -->
+            <GridLayout
+                android:id="@+id/gridDashboardModules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:useDefaultMargins="true">
+
+                <!-- 1. Profile Module Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardModuleProfile"
+                    style="@style/Widget.CampusConnect.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="@dimen/card_min_height">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/dashboard_icon_size"
+                            android:layout_height="@dimen/dashboard_icon_size"
+                            android:contentDescription="@string/cd_module_icon"
+                            android:src="@drawable/ic_profile"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:text="@string/module_profile"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 2. Courses Module Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardModuleCourses"
+                    style="@style/Widget.CampusConnect.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="@dimen/card_min_height">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/dashboard_icon_size"
+                            android:layout_height="@dimen/dashboard_icon_size"
+                            android:contentDescription="@string/cd_module_icon"
+                            android:src="@drawable/ic_courses"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:text="@string/module_courses"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 3. Notifications Module Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardModuleNotifications"
+                    style="@style/Widget.CampusConnect.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="@dimen/card_min_height">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/dashboard_icon_size"
+                            android:layout_height="@dimen/dashboard_icon_size"
+                            android:contentDescription="@string/cd_module_icon"
+                            android:src="@drawable/ic_notifications"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:text="@string/module_notifications"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 4. Settings Module Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardModuleSettings"
+                    style="@style/Widget.CampusConnect.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="@dimen/card_min_height">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/dashboard_icon_size"
+                            android:layout_height="@dimen/dashboard_icon_size"
+                            android:contentDescription="@string/cd_module_icon"
+                            android:src="@drawable/ic_settings"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:text="@string/module_settings"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 5. Reports Module Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardModuleReports"
+                    style="@style/Widget.CampusConnect.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="@dimen/card_min_height">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/dashboard_icon_size"
+                            android:layout_height="@dimen/dashboard_icon_size"
+                            android:contentDescription="@string/cd_module_icon"
+                            android:src="@drawable/ic_reports"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:text="@string/module_reports"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 6. Help Module Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardModuleHelp"
+                    style="@style/Widget.CampusConnect.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="@dimen/card_min_height">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/dashboard_icon_size"
+                            android:layout_height="@dimen/dashboard_icon_size"
+                            android:contentDescription="@string/cd_module_icon"
+                            android:src="@drawable/ic_help"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:text="@string/module_help"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

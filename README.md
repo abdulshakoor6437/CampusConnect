@@ -86,7 +86,7 @@ All transitions between activities are performed using explicit `Intent`s:
 |---|---|---|
 | **Email** | `user@example.com` | Hardcoded demo account |
 | **Password** | `Password@123` | Case-sensitive password |
-| **User Name** | `Alex Johnson` | Default student name passed to Dashboard & Profile |
+| **User Name** | `Abdul Shakoor` | Default student name passed to Dashboard & Profile |
 
 ---
 

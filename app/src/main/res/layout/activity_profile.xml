@@ -14,7 +14,8 @@
         android:id="@+id/toolbarProfile"
         style="@style/Widget.CampusConnect.Toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -49,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgProfileAvatar"
-        tools:text="Alex Johnson" />
+        tools:text="Abdul Shakoor" />
 
     <!-- User Role Badge -->
     <TextView
@@ -105,7 +106,7 @@
                 android:textColor="@color/on_surface"
                 android:textSize="@dimen/text_body_large"
                 android:textStyle="bold"
-                tools:text="Alex Johnson" />
+                tools:text="Abdul Shakoor" />
 
             <!-- Divider -->
             <View

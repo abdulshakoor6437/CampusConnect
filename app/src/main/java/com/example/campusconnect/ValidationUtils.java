@@ -12,7 +12,7 @@ public final class ValidationUtils {
     // Hardcoded demo credentials as required
     public static final String AUTH_EMAIL = "user@example.com";
     public static final String AUTH_PASSWORD = "Password@123";
-    public static final String DEFAULT_USER_NAME = "Alex Johnson";
+    public static final String DEFAULT_USER_NAME = "Abdul Shakoor";
 
     // Intent Extra Keys
     public static final String EXTRA_USER_NAME = "com.example.campusconnect.EXTRA_USER_NAME";

@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.example.campusconnect.databinding.ActivityDashboardBinding;
 
@@ -24,9 +28,22 @@ public class DashboardActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         binding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.layoutDashboardRoot, (v, windowInsets) -> {
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            binding.toolbarDashboard.setPadding(
+                binding.toolbarDashboard.getPaddingLeft(),
+                insets.top,
+                binding.toolbarDashboard.getPaddingRight(),
+                binding.toolbarDashboard.getPaddingBottom()
+            );
+            v.setPadding(insets.left, 0, insets.right, insets.bottom);
+            return windowInsets;
+        });
 
         extractIntentExtras();
         setupToolbar();

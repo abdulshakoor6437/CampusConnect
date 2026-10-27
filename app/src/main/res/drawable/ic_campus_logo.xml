@@ -21,11 +21,11 @@
         android:pathData="M35,44 L35,55 C35,61 41,66 48,66 C55,66 61,61 61,55 L61,44 L48,51 Z" />
     <!-- Tassel -->
     <path
-        android:strokeColor="@color/secondary"
+        android:strokeColor="@color/primary"
         android:strokeWidth="2.5"
         android:strokeLineCap="round"
         android:pathData="M65,40 L65,56" />
     <path
-        android:fillColor="@color/secondary"
+        android:fillColor="@color/primary"
         android:pathData="M62,56 L68,56 L66,62 L64,62 Z" />
 </vector>

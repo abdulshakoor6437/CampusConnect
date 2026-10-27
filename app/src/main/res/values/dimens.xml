@@ -13,6 +13,7 @@
     <dimen name="card_elevation">4dp</dimen>
     <dimen name="card_stroke_width">1dp</dimen>
     <dimen name="card_min_height">130dp</dimen>
+    <dimen name="card_margin">6dp</dimen>
     <dimen name="button_corner_radius">12dp</dimen>
     <dimen name="button_height">52dp</dimen>
 

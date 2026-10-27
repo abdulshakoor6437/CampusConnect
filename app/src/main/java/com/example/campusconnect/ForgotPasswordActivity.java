@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.example.campusconnect.databinding.ActivityForgotPasswordBinding;
 import com.google.android.material.snackbar.Snackbar;
@@ -23,9 +27,22 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         binding = ActivityForgotPasswordBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        int basePadding = getResources().getDimensionPixelSize(R.dimen.screen_padding);
+        ViewCompat.setOnApplyWindowInsetsListener(binding.layoutForgotPasswordConstraint, (v, windowInsets) -> {
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(
+                insets.left + basePadding,
+                insets.top + basePadding,
+                insets.right + basePadding,
+                insets.bottom + basePadding
+            );
+            return windowInsets;
+        });
 
         setupListeners();
     }

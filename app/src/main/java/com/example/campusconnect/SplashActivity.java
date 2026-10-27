@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.example.campusconnect.databinding.ActivitySplashBinding;
 
@@ -25,10 +29,23 @@ public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         // Initialize ViewBinding for type-safe view access
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        int basePadding = getResources().getDimensionPixelSize(R.dimen.screen_padding);
+        ViewCompat.setOnApplyWindowInsetsListener(binding.layoutSplashRoot, (v, windowInsets) -> {
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(
+                insets.left + basePadding,
+                insets.top + basePadding,
+                insets.right + basePadding,
+                insets.bottom + basePadding
+            );
+            return windowInsets;
+        });
 
         // Prepare navigation runnable to launch LoginActivity
         navigateRunnable = () -> {

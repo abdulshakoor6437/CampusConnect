@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Reports Screen: Layout demonstration using ConstraintLayout with 3 stat cards and progress bars -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutReportsRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".ReportsActivity">
+
+    <!-- Top App Bar / Toolbar with Back Navigation -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarReports"
+        style="@style/Widget.CampusConnect.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@color/on_surface"
+        app:title="@string/reports_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutReportsConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/screen_padding">
+
+            <!-- Subtitle Header -->
+            <TextView
+                android:id="@+id/tvReportsSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reports_subtitle"
+                android:textColor="@color/subtitle_color"
+                android:textSize="@dimen/text_body_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Stat Card 1: Attendance -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardReportAttendance"
+                style="@style/Widget.CampusConnect.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvReportsSubtitle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/screen_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_circle_avatar"
+                            android:contentDescription="@string/report_attendance_title"
+                            android:padding="@dimen/spacing_small"
+                            android:src="@drawable/ic_schedule"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_medium"
+                            android:layout_weight="1"
+                            android:text="@string/report_attendance_title"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvAttendanceValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/report_attendance_value"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/text_title_medium"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressAttendance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:layout_marginBottom="@dimen/spacing_small"
+                        android:progress="92"
+                        app:indicatorColor="@color/primary"
+                        app:trackColor="@color/outline_variant"
+                        app:trackCornerRadius="4dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/report_attendance_desc"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/text_label" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Stat Card 2: Cumulative GPA -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardReportGpa"
+                style="@style/Widget.CampusConnect.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardReportAttendance">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/screen_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_circle_avatar"
+                            android:contentDescription="@string/report_gpa_title"
+                            android:padding="@dimen/spacing_small"
+                            android:src="@drawable/ic_reports"
+                            app:tint="@color/secondary" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_medium"
+                            android:layout_weight="1"
+                            android:text="@string/report_gpa_title"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvGpaValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/report_gpa_value"
+                            android:textColor="@color/secondary"
+                            android:textSize="@dimen/text_title_medium"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressGpa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:layout_marginBottom="@dimen/spacing_small"
+                        android:progress="85"
+                        app:indicatorColor="@color/secondary"
+                        app:trackColor="@color/outline_variant"
+                        app:trackCornerRadius="4dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/report_gpa_desc"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/text_label" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Stat Card 3: Courses Enrolled -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardReportCourses"
+                style="@style/Widget.CampusConnect.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardReportGpa">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/screen_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_circle_avatar"
+                            android:contentDescription="@string/report_courses_title"
+                            android:padding="@dimen/spacing_small"
+                            android:src="@drawable/ic_courses"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_medium"
+                            android:layout_weight="1"
+                            android:text="@string/report_courses_title"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCoursesEnrolledValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/report_courses_value"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/text_title_medium"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressCourses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:layout_marginBottom="@dimen/spacing_small"
+                        android:progress="83"
+                        app:indicatorColor="@color/primary"
+                        app:trackColor="@color/outline_variant"
+                        app:trackCornerRadius="4dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/report_courses_desc"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/text_label" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -101,17 +101,14 @@ public class DashboardActivity extends AppCompatActivity {
         // 3. Notifications Module: Opens NotificationsActivity
         binding.cardModuleNotifications.setOnClickListener(v -> openNotifications());
 
-        // 4. Settings Module: Shows Toast
-        binding.cardModuleSettings.setOnClickListener(v ->
-                showModuleToast(getString(R.string.module_settings)));
+        // 4. Settings Module: Opens SettingsActivity
+        binding.cardModuleSettings.setOnClickListener(v -> openSettings());
 
-        // 5. Reports Module: Shows Toast
-        binding.cardModuleReports.setOnClickListener(v ->
-                showModuleToast(getString(R.string.module_reports)));
+        // 5. Reports Module: Opens ReportsActivity
+        binding.cardModuleReports.setOnClickListener(v -> openReports());
 
-        // 6. Help Module: Shows Toast
-        binding.cardModuleHelp.setOnClickListener(v ->
-                showModuleToast(getString(R.string.module_help)));
+        // 6. Help Module: Opens HelpActivity
+        binding.cardModuleHelp.setOnClickListener(v -> openHelp());
     }
 
     /**
@@ -149,6 +146,39 @@ public class DashboardActivity extends AppCompatActivity {
     private void openNotifications() {
         // Explicit Intent to open NotificationsActivity
         Intent intent = new Intent(DashboardActivity.this, NotificationsActivity.class);
+        intent.putExtra(ValidationUtils.EXTRA_USER_NAME, userName);
+        intent.putExtra(ValidationUtils.EXTRA_USER_EMAIL, userEmail);
+        startActivity(intent);
+    }
+
+    /**
+     * Navigates to SettingsActivity passing user name and email.
+     */
+    private void openSettings() {
+        // Explicit Intent to open SettingsActivity
+        Intent intent = new Intent(DashboardActivity.this, SettingsActivity.class);
+        intent.putExtra(ValidationUtils.EXTRA_USER_NAME, userName);
+        intent.putExtra(ValidationUtils.EXTRA_USER_EMAIL, userEmail);
+        startActivity(intent);
+    }
+
+    /**
+     * Navigates to ReportsActivity passing user name and email.
+     */
+    private void openReports() {
+        // Explicit Intent to open ReportsActivity
+        Intent intent = new Intent(DashboardActivity.this, ReportsActivity.class);
+        intent.putExtra(ValidationUtils.EXTRA_USER_NAME, userName);
+        intent.putExtra(ValidationUtils.EXTRA_USER_EMAIL, userEmail);
+        startActivity(intent);
+    }
+
+    /**
+     * Navigates to HelpActivity passing user name and email.
+     */
+    private void openHelp() {
+        // Explicit Intent to open HelpActivity
+        Intent intent = new Intent(DashboardActivity.this, HelpActivity.class);
         intent.putExtra(ValidationUtils.EXTRA_USER_NAME, userName);
         intent.putExtra(ValidationUtils.EXTRA_USER_EMAIL, userEmail);
         startActivity(intent);

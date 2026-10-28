@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Help & Support Screen: Expandable FAQ items and Contact Support Intent -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutHelpRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".HelpActivity">
+
+    <!-- Top App Bar / Toolbar with Back Navigation -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarHelp"
+        style="@style/Widget.CampusConnect.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@color/on_surface"
+        app:title="@string/help_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <!-- Section Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="@string/help_faq_header"
+                android:textColor="@color/on_surface"
+                android:textSize="@dimen/text_title_medium"
+                android:textStyle="bold" />
+
+            <!-- FAQ Item 1 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFaq1"
+                style="@style/Widget.CampusConnect.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:id="@+id/headerFaq1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvFaqQuestion1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/help_q1"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imgFaqArrow1"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:contentDescription="@string/cd_expand_collapse"
+                            android:src="@drawable/ic_expand_more"
+                            app:tint="@color/on_surface" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvFaqAnswer1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/help_a1"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="@dimen/text_body_medium"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- FAQ Item 2 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFaq2"
+                style="@style/Widget.CampusConnect.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:id="@+id/headerFaq2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvFaqQuestion2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/help_q2"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imgFaqArrow2"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:contentDescription="@string/cd_expand_collapse"
+                            android:src="@drawable/ic_expand_more"
+                            app:tint="@color/on_surface" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvFaqAnswer2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/help_a2"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="@dimen/text_body_medium"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- FAQ Item 3 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFaq3"
+                style="@style/Widget.CampusConnect.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:id="@+id/headerFaq3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvFaqQuestion3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/help_q3"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imgFaqArrow3"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:contentDescription="@string/cd_expand_collapse"
+                            android:src="@drawable/ic_expand_more"
+                            app:tint="@color/on_surface" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvFaqAnswer3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/help_a3"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="@dimen/text_body_medium"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- FAQ Item 4 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFaq4"
+                style="@style/Widget.CampusConnect.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:id="@+id/headerFaq4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvFaqQuestion4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/help_q4"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imgFaqArrow4"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:contentDescription="@string/cd_expand_collapse"
+                            android:src="@drawable/ic_expand_more"
+                            app:tint="@color/on_surface" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvFaqAnswer4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/help_a4"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="@dimen/text_body_medium"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- FAQ Item 5 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFaq5"
+                style="@style/Widget.CampusConnect.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <LinearLayout
+                        android:id="@+id/headerFaq5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvFaqQuestion5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/help_q5"
+                            android:textColor="@color/on_surface"
+                            android:textSize="@dimen/text_body_large"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imgFaqArrow5"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:contentDescription="@string/cd_expand_collapse"
+                            android:src="@drawable/ic_expand_more"
+                            app:tint="@color/on_surface" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvFaqAnswer5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/help_a5"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="@dimen/text_body_medium"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Action Button: Contact Support -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        android:padding="@dimen/screen_padding">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContactSupport"
+            style="@style/Widget.CampusConnect.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_contact_support"
+            app:icon="@drawable/ic_email"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+
+</LinearLayout>
